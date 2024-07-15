@@ -42,7 +42,7 @@ Goffee Music
 
 项目配置
 --
-Node.js v18.20.3
+本项目Node版本 v18.20.3  
 `.\client\goffee-music\src\utils\serverCfg.js` 服务端地址及端口  
 `.\client\goffee-music\src\utils\uploadCfg.js` 图床api及key（本项目使用的是ImgBB图床）  
 `.\server\model\emailCfg.js` 邮件发送的邮箱及key  
