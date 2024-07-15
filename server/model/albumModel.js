@@ -61,8 +61,11 @@ async function updateAlbum(albumId, albumName, albumDscrp, canSee, albumImg, cal
 
 // 删除歌单
 async function delAlbum(albumId, callback) {
-	var sql = `DELETE FROM albums, albumsongs WHERE albums.albumId = albumsongs.albumId AND albums.albumId = ?`
-	connection.query(sql, [albumId], (err, data) => {
+	var sql = `
+		DELETE FROM albums WHERE albumId = ?;
+		DELETE FROM albumsongs WHERE albumId = ?;
+	`
+	connection.query(sql, [albumId, albumId], (err, data) => {
 		if (err) throw err
 		callback && callback(err, data)
 	})
