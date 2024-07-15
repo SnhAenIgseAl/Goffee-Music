@@ -1,0 +1,269 @@
+/* 全局
+---------------------------------------------- */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: 0.3s all;
+	background-position: center center;
+	background-size: cover;
+}
+
+:root {
+	--cl-primary: var(--purple);
+	--cl-secondary: var(--blue);
+	--cl-white: rgba(255, 255, 255, 1);
+	--cl-white-75: rgba(250, 250, 250, .75);
+	--cl-white-50: rgba(250, 250, 250, .5);
+	--cl-white-25: rgba(250, 250, 250, .25);
+	--cl-white-10: rgba(250, 250, 250, .1);
+	--cl-black: rgba(0, 0, 0, 1);
+	--cl-black-75: rgba(0, 0, 0, .75);
+	--cl-black-50: rgba(0, 0, 0, .5);
+	--cl-black-25: rgba(0, 0, 0, .25);
+	--cl-black-10: rgba(0, 0, 0, .1);
+	--titleColor: rgba(250, 250, 250, 1);
+	--subtitleColor: rgba(250, 250, 250, .8);
+	--subsubtitleColor: rgba(250, 250, 250, .6);
+	--purple: rgba(255, 0, 255, 1);
+	--blue: rgba(0, 122, 255, 1);
+	--lucency: rgba(0, 0, 0, 0);
+	--titleSize: 4.8rem;
+	--subtitleSize: 2.4rem;
+	--subsubtitleSize: 1.8rem;
+	--whiteShadow:
+		0 0 50px var(--subsubtitleColor),
+		0 0 30px var(--subsubtitleColor),
+		0 0 15px var(--subsubtitleColor);
+	--purpleShadow: 
+		0 0 50px var(--purple),
+		0 0 30px var(--purple),
+		0 0 15px var(--purple);
+	--blueShadow:
+		0 0 50px var(--blue),
+		0 0 30px var(--blue),
+		0 0 15px var(--blue);
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	overflow-y: hidden;
+	background-color: #111;
+}
+
+
+
+/* 标签
+---------------------------------------------- */
+i {
+	font-family: 'iconfont' !important;
+	font-style: normal;
+	margin-right: 1rem;
+	transition-delay: 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	font-size: var(--subsubtitleSize);
+	color: var(--subtitleColor);
+	text-decoration: none;
+
+	&:link {
+		text-decoration: none;
+		color: var(--subtitleColor);
+	}
+
+	&:visited {
+		text-decoration: none;
+		color: var(--subtitleColor);
+	}
+
+	&:hover {
+		text-decoration: none;
+		text-shadow: var(--whiteShadow);
+		color: var(--titleColor);
+	}
+}
+
+
+
+/* 样式
+---------------------------------------------- */
+.wallpaper {
+	position: absolute;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: end;
+	width: auto;
+	height: 720px;
+	padding-right: 390px;
+	flex-wrap: nowrap;
+	-webkit-box-reflect: below 0 ;
+}
+
+.page {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: end;
+	width: 100%;
+	height: 720px;
+	-webkit-box-reflect: below 0 ;
+}
+
+.wallpaper::before,
+.page::before {
+	content: attr(content);
+	position: absolute;
+	z-index: 1;
+	transform: translateY(100%);
+	width: 100%;
+	height: 100%;
+	mask-image: url('../images/sea.gif');
+	mask-size: contain;
+	mask-mode: luminance;
+	background: #111;
+}
+
+.title {
+	font-family: '方正兰亭粗黑简体';
+	color: var(--titleColor);
+	font-size: var(--titleSize);
+	height: 6rem;
+	line-height: 6rem;
+}
+
+.subtitle {
+	display: flex;
+	align-items: baseline;
+	color: var(--subtitleColor);
+	font-size: var(--subtitleSize);
+	line-height: 3.6rem;
+	margin: 1.2rem 0;
+
+	i {
+		font-size: 2.4rem;
+	}
+}
+
+.subsubtitle {
+	color: var(--subsubtitleColor);
+	font-size: var(--subsubtitleSize);
+	line-height: 3rem;
+}
+
+.container {
+	display: flex;
+	flex-flow: column nowrap;
+	min-width: 390px;
+	height: 540px;
+	margin: 0 90px;
+	background-position: center center;
+	background-size: cover;
+	will-change: width;
+
+	.con-title {
+		padding: 1.75rem;
+		width: 100%;
+		height: auto;
+		font-size: var(--subtitleSize);
+		color: var(--titleColor);
+		background: linear-gradient(to top, #111, var(--lucency));
+	}
+}
+
+.text-info {
+	width: auto;
+	max-width: auto;
+	justify-content: space-between;
+	padding-bottom: 1.75rem;
+}
+.extend {
+	width: 780px;
+	min-width: 780px;
+	justify-content: end;
+}
+.song-list {
+	position: relative;
+	width: 390px;
+	margin: 0;
+	justify-content: end;
+	background-color: #333;
+
+	&:hover {
+		min-width: 780px;
+		cursor: pointer;
+	}
+}
+
+.form-box {
+	width: 720px;
+	margin: 0 auto 30px;
+}
+
+.form-item,
+.form-item {
+	margin-top: 30px;
+}
+
+.pri-button {
+	padding: 30px 0 !important;
+	font-size: var(--subtitleSize) !important;
+	color: var(--subtitleColor) !important;
+
+	&:hover {
+		text-shadow: var(--purpleShadow);
+	}
+}
+
+.sub-button {
+	padding: 30px 0 !important;
+	font-size: var(--subtitleSize) !important;
+	color: var(--subsubtitleColor) !important;
+	float: right;
+
+	&:hover {
+		text-shadow: var(--blueShadow);
+	}
+}
+
+.page_left-bg {
+	height: 720px;
+	background-image: url('https://images.weserv.nl/?url=https://i.ibb.co/myH4YJ1/Goffee-Music-No-Reflect.png');
+}
+
+.confirm {
+	background-image: url('https://images.weserv.nl/?url=https://i.ibb.co/kKhbRwc/confirm.png');
+}
+
+.reset {
+	background-image: url('https://images.weserv.nl/?url=https://i.ibb.co/74NDxLr/reset.png');
+}
+
+.manage-aside {
+	float: left;
+	margin-top: 90px;
+	width: 15%;
+	height: 630px;
+	background-color: #222;
+}
+
+.main-box {
+	float: right;
+	width: 85%;
+	height: 630px;
+	/* margin-top: 150px; */
+	/* background-image: linear-gradient(to right top, #161a43, #0f1d41, #0b203e, #0a223b, #0d2337, #09253d, #052743, #002949, #002b5a, #022b6a, #222876, #3f1f7f); */
+}
+
+.main {
+	width: 80%;
+	margin: 60px auto 0;
+}
+
+.table {
+	height: 480px;
+	margin-top: 30px;
+}

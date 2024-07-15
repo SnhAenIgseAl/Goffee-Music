@@ -1,0 +1,226 @@
+:root {
+	--el-color-primary: #fff !important;
+	--el-input-border-color: var(--cl-white-25) !important;
+}
+
+.el-anchor {
+	--el-anchor-bg-color: unset !important;
+	position: fixed !important;
+	top: 90px;
+}
+
+.el-message,
+.el-message_content {
+	background: #333 !important;
+	border: 2px solid #444 !important;
+	padding: 15px !important;
+	font-size: var(--subsubtitleSize) !important;
+}
+.el-message_content {
+	font-size: var(--subsubtitleSize) !important;
+}
+
+
+.el-input__wrapper,
+.el-select__wrapper {
+	height: 60px !important;
+	background: none !important;
+	font-size: var(--subsubtitleSize) !important;
+	border-radius: 10px !important;
+}
+
+.el-input__inner,
+.el-button {
+	color: var(--subsubtitleColor) !important;
+	font-size: var(--subsubtitleSize) !important;
+
+	::placeholder {
+		color: var(--subsubtitleColor) !important;
+	}
+
+	&:hover {
+		text-shadow: var(--whiteShadow);
+	}
+}
+
+.el-form-item__label {
+	font-size: var(--subsubtitleSize) !important;
+	color: var(--subsubtitleColor) !important;
+	line-height: 36px;
+	height: 36px;
+
+	&::before {
+		content: unset !important;
+		margin-right: 0px !important;
+	}
+}
+
+.el-select__placeholder {
+	color: var(--subsubtitleColor) !important;
+}
+
+.el-select-dropdown {
+	border: unset;
+	background-color: #333 !important;
+}
+
+.el-select-dropdown .el-option {
+	font-size: var(--subsubtitleSize) !important;
+	color: var(--subsubtitleColor) !important;
+}
+
+.el-select-dropdown .el-select-dropdown__item.selected {
+	background-color: #444 !important;
+}
+
+.el-switch__core {
+	background-color: var(--cl-white-25) !important;
+}
+
+.el-textarea__inner {
+	border-radius: 10px !important;
+	background: none !important;
+	font-size: var(--subsubtitleSize) !important;
+	padding: 15px 11px !important;
+	color: var(--subsubtitleColor) !important;
+}
+
+.el-switch__label * {
+	font-size: var(--subsubtitleSize) !important;
+}
+
+.el-drawer {
+	background-color: var(--cl-white-10) !important;
+	backdrop-filter: blur(30px);
+}
+.el-drawer__title {
+	font-size: var(--subtitleSize);
+	line-height: 3rem;
+}
+.el-drawer.ltr, .el-drawer.rtl {
+	position: fixed !important;
+	z-index: 9999 !important;
+}
+.el-drawer__body {
+	padding: unset !important;
+}
+
+.el-table,
+.el-table__cell{
+	text-align: center !important;
+	background-color: unset !important;
+
+	tr {
+		background-color: unset !important;
+	}
+
+	th {
+		background-color: unset !important;
+	}
+
+	.cell {
+		font-size: var(--subsubtitleSize);
+		padding: 12px 0;
+	}
+}
+.el-table__body-wrapper {
+	color: var(--subtitleColor);
+}
+.el-table td.el-table__cell {
+	border-bottom: 1px solid var(--cl-white-10) !important;
+}
+
+.el-dialog {
+	position: absolute !important;
+	z-index: 9999 !important;
+	margin: 0;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	background-color: #333 !important;
+	border-radius: 10px;
+
+	.el-dialog__title {
+		color: var(--subsubtitleColor) !important;
+	}
+	.el-dialog__body {
+		color: var(--subtitleColor) !important;
+		font-size: var(--subsubtitleSize) !important;
+	}
+}
+
+.el-menu {
+	background-color: #222 !important;
+	color: var(--subtitleColor) !important;
+	border: unset;
+
+	.is-active {
+		background: #333 !important;
+		font-size: var(--subsubtitleSize) !important;
+		color: var(--titleColor) !important;
+	}
+
+	.el-sub-menu__title {
+		font-size: var(--subsubtitleSize) !important;
+		color: var(--subtitleColor) !important;
+
+		&:hover {
+			background-color: #333 !important;
+		}
+	}
+
+	.el-menu-item {
+		font-size: var(--subsubtitleSize) !important;
+		color: var(--subtitleColor) !important;
+
+		&:hover {
+			background-color: #333 !important;
+		}
+	}
+}
+
+.el-text {
+	font-size: var(--subsubtitleSize) !important;
+}
+
+.el-timeline-item__content {
+	color: var(--subtitleColor) !important;
+	font-size: var(--subsubtitleSize) !important;
+
+	.el-text {
+		margin-right: 1.6rem;
+	}
+
+	.el-text--info {
+		color: var(--subtitleColor) !important;
+	}
+}
+
+.el-timeline-item__timestamp {
+	color: var(--subsubtitleColor) !important;
+	font-size: var(--subsubtitleSize) !important;
+}
+
+.is-bottom {
+	margin-top: 1.6rem;
+}
+
+.el-card {
+	--el-card-bg-color: #333 !important;
+	border-radius: 10px !important;
+	border:  unset !important;
+}
+
+.el-popper.is-light {
+	background-color: unset !important;
+}
+
+.el-popover.el-popper {
+	border: unset !important;
+	box-shadow: unset !important;
+}
+
+.el-popper.is-light .el-popper__arrow:before {
+	background: var(--cl-black-50) !important;
+	border: unset !important;
+}
