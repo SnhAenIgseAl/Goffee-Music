@@ -647,6 +647,11 @@ async function updateUser(req, res) {
 			res.json({
 				code: 200,
 				success: true,
+				userInfo: await new Promise((resolve, reject) => {
+					userModel.getUserInfoById(user.userId, (err, data) => {
+						resolve(data[0])
+					})
+				}),
 				msg: '信息更新成功'
 			})
 		} else {
